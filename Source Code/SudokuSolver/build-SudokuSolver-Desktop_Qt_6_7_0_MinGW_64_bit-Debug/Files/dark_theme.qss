@@ -1,0 +1,86 @@
+/* Dark Theme for QMainWindow in a Game */
+
+/* Set dark background color */
+QMainWindow {
+    background-color: #232323;
+    color: #ffffff; /* Set text color to white */
+}
+
+/* Customize title bar */
+QMainWindow::title {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 6px;
+}
+
+/* Customize close, minimize, and maximize buttons */
+QMainWindow::close-button,
+QMainWindow::minimize-button,
+QMainWindow::maximize-button {
+    background-color: #333333;
+    border: 1px solid #555555;
+    width: 12px;
+    height: 12px;
+}
+
+/* Customize toolbars */
+QToolBar {
+    background-color: #333333;
+    border: 1px solid #555555;
+    color: #ffffff;
+}
+
+/* Customize buttons on the toolbar */
+QToolBar QToolButton {
+    background-color: #444444;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 5px;
+}
+
+/* Customize status bar */
+QStatusBar {
+    background-color: #333333;
+    color: #ffffff;
+    border-top: 1px solid #555555;
+}
+
+/* Customize push buttons */
+QPushButton {
+    background-color: #444444;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 5px;
+}
+
+/* Customize hover effect for buttons */
+QPushButton:hover {
+    background-color: #555555;
+}
+
+/* Customize focus effect for buttons */
+QPushButton:focus {
+    border: 2px solid #00bfff; /* Change the color for focus */
+}
+
+/* Customize labels */
+QLabel {
+    color: #ffffff;
+}
+
+/* Hover effect for the hyperlink */
+QLabel:hover {
+    color: #00bfff; /* Change color on hover */
+}
+
+/* Customize dialogs */
+QDialog {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Customize message boxes */
+QMessageBox {
+    background-color: #333333;
+    color: #ffffff;
+}
