@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon("Files/2.jpg"));
 
     Home w;
+    w.setWindowTitle("SudokuSolver");
     w.show();
     return a.exec();
 }

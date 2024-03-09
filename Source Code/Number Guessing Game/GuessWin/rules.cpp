@@ -8,6 +8,7 @@ Rules::Rules(QWidget *parent)
     , ui(new Ui::Rules)
 {
     ui->setupUi(this);
+    setWindowTitle("GuessWin");
     connect(ui->backBtn, SIGNAL(clicked(bool)), this, SLOT(back()));
 }
 
@@ -21,7 +22,7 @@ void Rules::back()
     Welcome w;
     w.clickSound->play();
 
-    Home *home = new Home(this);
-    this->close();
+    Home *home = new Home();
     home->show();
+    this->close();
 }

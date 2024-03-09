@@ -30,7 +30,6 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon("Files/Background.jpg"));
 
     Welcome w;
-    w.setWindowTitle("GuessWin");
     w.show();
 
     QObject::connect(&a, &QCoreApplication::aboutToQuit, write);

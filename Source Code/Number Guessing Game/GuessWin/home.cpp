@@ -13,7 +13,7 @@ Home::Home(QWidget *parent)
     , ui(new Ui::Home)
 {
     ui->setupUi(this);
-
+    setWindowTitle("GuessWin");
     ui->background->setPixmap(QPixmap("Files/Background.jpg"));
     ui->userNameLineEdit->setText(Data::users[Data::currentUserEmail].userName);
     ui->rateLineEdit->setText(QString::number(Data::users[Data::currentUserEmail].rate));
@@ -36,9 +36,9 @@ void Home::profile()
     Welcome w;
     w.clickSound->play();
 
-    UserProfile *userProfile = new UserProfile(this);
-    this->close();
+    UserProfile *userProfile = new UserProfile();
     userProfile->show();
+    this->close();
 }
 
 void Home::logOut()
@@ -48,25 +48,25 @@ void Home::logOut()
 
     Data::currentUserEmail = "";
     Welcome *welcome = new Welcome();
-    this->close();
     welcome->show();
+    this->close();
 }
 
 void Home::single(){
     Welcome w;
     w.clickSound->play();
 
-    Play *play = new Play(this);
-    this->close();
+    Play *play = new Play();
     play->single();
+    this->close();
 }
 void Home::multi(){
     Welcome w;
     w.clickSound->play();
 
-    Play *play = new Play(this);
-    this->close();
+    Play *play = new Play();
     play->multi();
+    this->close();
 }
 
 void Home::rules()
@@ -74,7 +74,7 @@ void Home::rules()
     Welcome w;
     w.clickSound->play();
 
-    Rules *rules = new Rules(this);
-    this->close();
+    Rules *rules = new Rules();
     rules->show();
+    this->close();
 }

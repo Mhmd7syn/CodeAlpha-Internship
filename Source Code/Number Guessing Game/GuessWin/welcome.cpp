@@ -13,6 +13,7 @@ Welcome::Welcome(QWidget *parent)
 {
     ui->setupUi(this);
 
+    setWindowTitle("GuessWin");
     ui->background->setPixmap(QPixmap("Files/Background.jpg"));
 
 
@@ -53,16 +54,16 @@ void Welcome::newUser()
 {
     clickSound->play();
     NewUser *newUser = new NewUser();
-    this->close();
     newUser->show();
+    this->close();
 }
 
 void Welcome::login()
 {
     clickSound->play();
     Login *window = new Login();
-    this->close();
     window->show();
+    this->close();
 }
 
 void Welcome::onMediaStateChanged(QMediaPlayer::PlaybackState state)

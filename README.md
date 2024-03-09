@@ -1,8 +1,6 @@
 # CodeAlpha-Internship
 This repository, named "CodeAlpha-Internship" encompasses three distinct projects developed using the Qt framework and C++ programming language. Each project demonstrates versatility and proficiency in different aspects of software development.
 
-*Note: You Can Use the executable files to setup the programs or use the source code
-
 *Projects:
 1- Number Guessing Game:
 
@@ -26,6 +24,8 @@ Description: The Sudoku Solver project is designed to solve Sudoku puzzles using
 
 *How to Use:
 
-Each project is encapsulated in its directory within the repository.
-Follow the project-specific documentation or README files for instructions on building, running, and interacting with the applications.
-Dependencies, if any, are outlined in the respective project documentation.
+- Each project is encapsulated in its directory within the repository. 
+- You Can Use the executable files or the source code.
+- There's a video for every project that describes its flow.
+- Follow the project-specific documentation or README files for instructions on building, running, and interacting with the applications.
+- Dependencies, if any, are outlined in the respective project documentation.

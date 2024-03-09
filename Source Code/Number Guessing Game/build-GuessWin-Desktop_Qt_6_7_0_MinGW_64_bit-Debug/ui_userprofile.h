@@ -55,9 +55,9 @@ public:
         if (UserProfile->objectName().isEmpty())
             UserProfile->setObjectName("UserProfile");
         UserProfile->setEnabled(true);
-        UserProfile->resize(800, 724);
-        UserProfile->setMinimumSize(QSize(800, 724));
-        UserProfile->setMaximumSize(QSize(800, 724));
+        UserProfile->resize(800, 600);
+        UserProfile->setMinimumSize(QSize(800, 600));
+        UserProfile->setMaximumSize(QSize(800, 600));
         QFont font;
         font.setPointSize(12);
         font.setBold(true);
@@ -70,7 +70,6 @@ public:
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(50, 50, 50, 50);
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setObjectName("gridLayout_2");
         gridLayout = new QGridLayout();

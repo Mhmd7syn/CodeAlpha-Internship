@@ -11,6 +11,7 @@ Login::Login(QWidget *parent)
     , ui(new Ui::Login)
 {
     ui->setupUi(this);
+    setWindowTitle("GuessWin");
     connect(ui->backBtn, SIGNAL(clicked(bool)), this, SLOT(back()));
     connect(ui->loginBtn, SIGNAL(clicked(bool)), this, SLOT(login()));
     connect(ui->actionRegister, SIGNAL(triggered(bool)), this, SLOT(reg()));
@@ -37,9 +38,9 @@ void Login::login()
     {
         Data::currentUserEmail = email;
         QMessageBox::information(this, "Success", "Welcome Back " + user->userName + "\nLet's Play 🥳");
-        Home *home = new Home(this);
-        this->close();
+        Home *home = new Home();
         home->show();
+        this->close();
     }
     else
         QMessageBox::warning(this, "Error", "Wrong Password");
@@ -50,9 +51,9 @@ void Login::reg()
     Welcome w;
     w.clickSound->play();
 
-    NewUser *newUser = new NewUser(this);
-    this->close();
+    NewUser *newUser = new NewUser();
     newUser->show();
+    this->close();
 }
 
 void Login::back()

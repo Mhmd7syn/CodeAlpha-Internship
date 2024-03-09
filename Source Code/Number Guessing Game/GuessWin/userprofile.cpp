@@ -12,6 +12,7 @@ UserProfile::UserProfile(QWidget *parent)
     , ui(new Ui::UserProfile)
 {
     ui->setupUi(this);
+    setWindowTitle("GuessWin");
     User user = Data::users[Data::currentUserEmail];
     ui->photoLabel->setPixmap(QPixmap(user.photoPath));
     ui->userNameLineEdit->setText(user.userName);
@@ -35,9 +36,9 @@ void UserProfile::changeInfo()
     Welcome w;
     w.clickSound->play();
 
-    ChangeInfo *changeInfo = new ChangeInfo(this);
-    this->close();
+    ChangeInfo *changeInfo = new ChangeInfo();
     changeInfo->show();
+    this->close();
 }
 
 void UserProfile::changePhoto()
@@ -58,6 +59,6 @@ void UserProfile::back()
     w.clickSound->play();
 
     Home *home = new Home();
-    this->close();
     home->show();
+    this->close();
 }

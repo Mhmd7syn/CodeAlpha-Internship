@@ -10,6 +10,7 @@ ChangeInfo::ChangeInfo(QWidget *parent)
     , ui(new Ui::ChangeInfo)
 {
     ui->setupUi(this);
+    setWindowTitle("GuessWin");
     ui->genderComboBox->setPlaceholderText("Choose Gender...");
     ui->genderComboBox->addItem(QIcon("Icons/Male Icon.png"), "Male");
     ui->genderComboBox->addItem(QIcon("Icons/Female Icon.png"), "Female");
@@ -52,7 +53,7 @@ void ChangeInfo::update()
     else if(newPassword == confirmPassword || newPassword.isEmpty())
     {
         if(newPassword.isEmpty()) newPassword = user.password;
-        User newUser(userName, user.email, newPassword, gender, age, 0, user.photoPath);
+        User newUser(userName, user.email, newPassword, gender, age, user.rate, user.photoPath);
         Data::users.insert(newUser.email, newUser);
         Data::currentUserEmail = newUser.email;
         QMessageBox::information(this, "Success", "Hello " + userName + "\nLet's Play 🥳");
@@ -66,7 +67,7 @@ void ChangeInfo::back()
     Welcome w;
     w.clickSound->play();
 
-    UserProfile *userProfile = new UserProfile(this);
-    this->close();
+    UserProfile *userProfile = new UserProfile();
     userProfile->show();
+    this->close();
 }

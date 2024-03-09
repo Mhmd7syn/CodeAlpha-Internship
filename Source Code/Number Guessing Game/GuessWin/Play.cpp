@@ -16,6 +16,7 @@ Play::Play(QWidget *parent)
     , ui(new Ui::Play)
 {
     ui->setupUi(this);
+    setWindowTitle("GuessWin");
     ui->background->setPixmap(QPixmap("Files/Background.jpg"));
 
     QAudioOutput *audioWinMessage = new QAudioOutput;
@@ -258,8 +259,8 @@ void Play::back()
     w.clickSound->play();
 
     Home *home = new Home();
-    this->close();
     home->show();
+    this->close();
 }
 
 bool Play::modeMsg()

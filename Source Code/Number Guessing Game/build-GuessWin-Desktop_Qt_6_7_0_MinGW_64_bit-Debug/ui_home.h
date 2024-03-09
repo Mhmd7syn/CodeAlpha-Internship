@@ -36,8 +36,8 @@ public:
     QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLineEdit *rateLineEdit;
-    QLabel *userNameLabel;
     QLineEdit *userNameLineEdit;
+    QLabel *userNameLabel;
     QLabel *rateLabel;
     QPushButton *singleBtn;
     QPushButton *multiBtn;
@@ -102,7 +102,15 @@ public:
         rateLineEdit->setFont(font1);
         rateLineEdit->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(rateLineEdit, 1, 1, 1, 1);
+        gridLayout->addWidget(rateLineEdit, 1, 2, 1, 1);
+
+        userNameLineEdit = new QLineEdit(layoutWidget);
+        userNameLineEdit->setObjectName("userNameLineEdit");
+        userNameLineEdit->setEnabled(false);
+        userNameLineEdit->setFont(font1);
+        userNameLineEdit->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(userNameLineEdit, 0, 2, 1, 1);
 
         userNameLabel = new QLabel(layoutWidget);
         userNameLabel->setObjectName("userNameLabel");
@@ -114,15 +122,7 @@ public:
         userNameLabel->setFont(font1);
         userNameLabel->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(userNameLabel, 0, 0, 1, 1);
-
-        userNameLineEdit = new QLineEdit(layoutWidget);
-        userNameLineEdit->setObjectName("userNameLineEdit");
-        userNameLineEdit->setEnabled(false);
-        userNameLineEdit->setFont(font1);
-        userNameLineEdit->setAlignment(Qt::AlignCenter);
-
-        gridLayout->addWidget(userNameLineEdit, 0, 1, 1, 1);
+        gridLayout->addWidget(userNameLabel, 0, 0, 1, 1, Qt::AlignHCenter|Qt::AlignVCenter);
 
         rateLabel = new QLabel(layoutWidget);
         rateLabel->setObjectName("rateLabel");
@@ -131,7 +131,7 @@ public:
         rateLabel->setFont(font1);
         rateLabel->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(rateLabel, 1, 0, 1, 1);
+        gridLayout->addWidget(rateLabel, 1, 0, 1, 1, Qt::AlignRight|Qt::AlignVCenter);
 
         singleBtn = new QPushButton(centralwidget);
         singleBtn->setObjectName("singleBtn");
@@ -148,7 +148,6 @@ public:
         Home->setCentralWidget(centralwidget);
         background->raise();
         guessWinLabel->raise();
-        layoutWidget->raise();
         layoutWidget->raise();
         backBtn->raise();
         singleBtn->raise();

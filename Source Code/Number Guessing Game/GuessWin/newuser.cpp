@@ -14,6 +14,7 @@ NewUser::NewUser(QWidget *parent)
     , ui(new Ui::NewUser)
 {
     ui->setupUi(this);
+    setWindowTitle("GuessWin");
     ui->genderComboBox->setPlaceholderText("Choose Gender...");
     ui->genderComboBox->addItem(QIcon("Icons/Male Icon.png"), "Male");
     ui->genderComboBox->addItem(QIcon("Icons/Female Icon.png"), "Female");
@@ -47,9 +48,9 @@ void NewUser::reg()
     if(user != Data::users.end())
     {
         QMessageBox::warning(this, "Error", "Email is Already Exist");
-        Login *login = new Login(this);
-        this->close();
+        Login *login = new Login();
         login->show();
+        this->close();
     }
     else if(email.isEmpty() || userName.isEmpty())
     {
@@ -65,9 +66,9 @@ void NewUser::reg()
         Data::users.insert(newUser.email, newUser);
         Data::currentUserEmail = newUser.email;
         QMessageBox::information(this, "Success", "Hello " + userName + "\nLet's Play 🥳");
-        Home *home = new Home(this);
-        this->close();
+        Home *home = new Home();
         home->show();
+        this->close();
     } else
         QMessageBox::warning(this, "Error", "Hello " + userName + "\nPlease, Check that the password is the same as the confirmation");
 
@@ -77,15 +78,15 @@ void NewUser::login()
 {
     Welcome w;
     w.clickSound->play();
-    Login *login = new Login(this);
-    this->close();
+    Login *login = new Login();
     login->show();
+    this->close();
 }
 
 void NewUser::back()
 {
     Welcome *welcome = new Welcome();
     welcome->clickSound->play();
-    this->close();
     welcome->show();
+    this->close();
 }

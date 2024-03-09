@@ -133,7 +133,7 @@
      <property name="spacing">
       <number>0</number>
      </property>
-     <item row="1" column="1">
+     <item row="1" column="2">
       <widget class="QLineEdit" name="rateLineEdit">
        <property name="enabled">
         <bool>false</bool>
@@ -150,7 +150,24 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="userNameLineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Black</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
       <widget class="QLabel" name="userNameLabel">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -173,24 +190,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="userNameLineEdit">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>12</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
+     <item row="1" column="0" alignment="Qt::AlignRight|Qt::AlignVCenter">
       <widget class="QLabel" name="rateLabel">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -277,7 +277,6 @@
    </widget>
    <zorder>background</zorder>
    <zorder>guessWinLabel</zorder>
-   <zorder>layoutWidget</zorder>
    <zorder>layoutWidget</zorder>
    <zorder>backBtn</zorder>
    <zorder>singleBtn</zorder>
